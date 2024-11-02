@@ -1,0 +1,15 @@
+requires-python = ">=3.10.*"
+[tool.pdm.dev-dependencies]
+dev = [
+    "pytest",
+    "ipykernel",
+    "ruff",
+]
+
+[[tool.pdm.source]]
+name = "pytorch"
+url = "https://download.pytorch.org/whl/cu118"
+verify_ssl = true
+
+[tool.ruff]
+line-length = 120
