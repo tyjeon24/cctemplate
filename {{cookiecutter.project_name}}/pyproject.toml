@@ -13,3 +13,19 @@ verify_ssl = true
 
 [tool.ruff]
 line-length = 120
+
+[tool.ruff.lint]
+extend-select = [
+  "RUF",  # ruff : ruff 검사기
+  "I",    # isort : import 정렬 기능
+  "W",    # pycodestyle
+  "UP",   # pyupgrade # 포맷 변경기능
+  "D",   # pydocstyle
+
+  "NPY", # numpy 관련
+  "FAST", # FastAPI 관련
+  "PD", # pandas 관련
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
