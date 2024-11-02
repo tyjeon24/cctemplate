@@ -1,6 +1,6 @@
 import toml
 
-toml_file = "pyproject.toml"
+toml_file = "../pyproject.toml"
 
 with open(toml_file, "r") as f:
     project = toml.load(f)
