@@ -12,9 +12,10 @@ with open(toml_file, "r") as f:
 
 with open(temp_toml_file, "r") as f:
     template = toml.load(f)
-print(template)
+    project.update(template)
+    
 with open(toml_file, "w") as f:
-    toml.dump(project.update(template), f)
+    toml.dump(project, f)
 
 # Cleanup
 temp_toml_file.unlink(missing_ok=True)
