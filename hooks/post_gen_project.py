@@ -21,6 +21,7 @@ with open(toml_file, "w") as f:
     toml.dump(project, f)
     
 while not temp_toml_file.exists():
+    print(temp_toml_file, project_name_dir)
     pass
 
 temp_toml_file.unlink(missing_ok=True)
