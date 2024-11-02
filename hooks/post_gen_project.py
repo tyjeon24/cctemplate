@@ -20,5 +20,5 @@ if not any(dep.startswith("pandas") for dep in dependencies):
 with open(toml_file, "w") as f:
     toml.dump(project, f)
     
-temp_toml_file.unlink()
+temp_toml_file.unlink(missing_ok=True)
 project_name_dir.rmdir()
