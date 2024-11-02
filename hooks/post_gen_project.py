@@ -4,8 +4,8 @@ from pathlib import Path
 
 
 toml_file = Path("../pyproject.toml")
-temp_toml_file = Path("{{cookiecutter.project_name}}/pyproject.toml")
-project_name_dir = Path("{{cookiecutter.project_name}}")
+temp_toml_file = Path("../{{cookiecutter.project_name}}/pyproject.toml")
+project_name_dir = Path("../{{cookiecutter.project_name}}")
 
 with open(toml_file, "r") as f:
     project = toml.load(f)
