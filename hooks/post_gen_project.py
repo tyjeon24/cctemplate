@@ -50,7 +50,7 @@ with open(toml_file, "r") as f:
     project = f.read() + contents
 
 with open(toml_file, "w") as f:
-    toml.dump(project, f)
+    f.write(project)
 
 temp_toml_file.unlink(missing_ok=True)
 project_name_dir.rmdir()
